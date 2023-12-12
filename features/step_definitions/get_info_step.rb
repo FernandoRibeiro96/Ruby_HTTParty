@@ -1,11 +1,12 @@
 Given('for the user to consult employee information') do
-    pending # Write code here that turns the phrase above into concrete actions        
+    @get_url = 'http://dummy.restapiexample.com/api/v1/employees'
   end
   
   When('he carry out the research') do
-    pending # Write code here that turns the phrase above into concrete actions        
+    @list_employee = HTTParty.get(@get_url)         
   end
   
   Then('a list of employees must return') do
-    pending # Write code here that turns the phrase above into concrete actions        
+    expect(@list_employee.code).to eql 200
+    expect(@list_employee.message).to eql 'OK'       
   end
