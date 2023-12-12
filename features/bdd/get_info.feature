@@ -4,6 +4,7 @@ Feature: Search employees
     he system user
     Want to be able to consult employee information
 
+    @0001 @search_employee_information
     Scenario Outline: Search for employee information
         Given for the user to consult employee information
         When he carry out the research
